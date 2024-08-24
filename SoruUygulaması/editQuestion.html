@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru Düzenleme</title>
+    <link rel="stylesheet" href="css/editQuestion.css">
+</head>
+<body>
+    <div class="container">
+        <div class="addQuestionForm">
+            <h2 style="margin-bottom: 20px;">Soruyu Düzenle</h2>
+            <form action="addPostQuery.php" method="POST" enctype="multipart/form-data">
+                <textarea type="text" id="question" name="question" rows="6" placeholder="Soru İçeriği"
+                  required></textarea><br><br>
+
+                <input type="text" id="answerA" name="answerA" placeholder="A" required><br><br>
+                <input type="text" id="answerB" name="answerB" placeholder="B" required><br><br>
+                <input type="text" id="answerC" name="answerC" placeholder="C" required><br><br>
+                <input type="text" id="answerD" name="answerD" placeholder="D" required><br><br>
+        
+        
+                <button type="submit">Soruyu Düzenle</button>
+                <div class="containerButton">
+                    <a href="panelQuestions.html">
+                        <div class="panelButton">
+                            Geri
+                        </div>
+                    </a>
+                </div>
+        
+              </form>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+    <script>
+const panelPageButton = document.getElementById("panelPageButton");
+  function goToPanelPage() {
+    window.location.href = "panelQuestions.html";
+  }
+  panelPageButton.addEventListener("click", goToHomePage);
+    </script>
+</body>
+</html>
